@@ -1,0 +1,130 @@
+body {
+  /* background-color: rgb(105, 75, 0); */
+  background: linear-gradient(-45deg, black, rgb(105, 75, 0));
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: linear-gradient(
+    -45deg,
+    rgba(105, 75, 0, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  box-shadow: rgba(0, 0, 0, 0.5) 30px 30px 100px,
+    rgba(255, 255, 255, 0.15) -10px -10px 50px;
+  border: 1px rgba(255, 255, 255, 0.1) solid;
+}
+.first-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  box-shadow: inset black 0 0 10px;
+  background-image: url(images/clock.png);
+  background-size: cover;
+  background-position: center;
+}
+.first-inner::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  border: 2px white solid;
+  border-radius: 50%;
+}
+.hour {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+.sec {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+.min {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+.hour::before {
+  width: 10px;
+  height: 125px;
+  background-color: black;
+  position: absolute;
+  content: "";
+  z-index: 5;
+  border-radius: 50%;
+}
+.min::before {
+  width: 10px;
+  height: 175px;
+  background-color: black;
+  position: absolute;
+  content: "";
+  z-index: 6;
+  border-radius: 50%;
+
+}
+.sec::before {
+  width: 2px;
+  height: 175px;
+  background-color: white;
+  position: absolute;
+  content: "";
+  z-index: 7;
+}
+
+/* media queries */
+@media screen and (max-width:700px) {
+    .first{
+        width: 350px;
+        height: 350px;
+    }
+    .first-inner{
+        width: 300px;
+        height: 300px;
+    }
+    .hour{
+        width: 150px;
+        height: 150px;
+    }
+    .hour::before{
+        height: 75px;
+    }
+    .sec{
+        width: 175px;
+        height: 175px;
+    }
+    .sec::before{
+        height: 110px;
+    }
+    .min{
+        width: 200px;
+        height: 200px;
+    }
+    .min::before{
+        height: 100px;
+    }
+    
+}
