@@ -12,7 +12,11 @@ setInterval(function () {
   }
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  hourHand.style.transform = "rotate(" + hours * 30 + minutes * 0.5 + "deg)";
+
+  let hr = hours * 30 + minutes * 0.5;
+
+  hourHand.style.transform = "rotate(" + hr + "deg)";
+
   minHand.style.transform = "rotate(" + minutes * 6 + "deg)";
   secHand.style.transform = "rotate(" + seconds * 6 + "deg)";
 }, 1000);
